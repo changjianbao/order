@@ -11,7 +11,7 @@
 ### base 函数
 killTomcat()
 {
-    pid=`ps -ef|grep tomcat|grep java|awk '{print $2}'`
+    pid=`ps -ef|grep TOMCAT_APP_PATH|grep java|awk '{print $2}'`
     echo "tomcat Id list :$pid"
     if [ "$pid" = "" ]
     then
@@ -40,6 +40,15 @@ mv order.war ROOT.war
 # 启动Tomcat
 cd $TOMCAT_APP_PATH/
 sh bin/startup.sh
+
+#JenKins
+#BULLD_ID=DONTKILLME
+#./etc/profile
+##配置运行参数
+#export PROJ_PATH=`pwd`
+#export TOMCAT_APP_PATH=/opt/tomcat8
+#
+#sh $PROJ_PATH/order/deploy.sh
 
 
 
