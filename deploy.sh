@@ -22,8 +22,9 @@ killTomcat()
 }
 cd $PROJ_PATH/order
 mvn clean install
-mkdir test
 
+echo TOMCAT_APP_PATH
+echo "Hello World"
 # 停tomcat
 killTomcat
 
